@@ -74,8 +74,8 @@ Tidy_Data <- meanAndStd_Data %>%
                 group_by(subjectId, activityCode) %>%
                 summarise_all(list(mean))
 
-## Export tidy dataset
-write.csv(Tidy_Data, "Tidy_Data.csv")
+## Export tidy dataset as text file
+write.table(Tidy_Data, "Tidy_Data.txt", row.names = FALSE)
 
 
 
