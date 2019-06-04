@@ -34,28 +34,35 @@ The data from the original source contains measurements for:
 - fBodyGyroJerkMag
 
 ...and calculated the following metrics:
-mean(): Mean value
-std(): Standard deviation
-mad(): Median absolute deviation 
-max(): Largest value in array
-min(): Smallest value in array
-sma(): Signal magnitude area
-energy(): Energy measure. Sum of the squares divided by the number of values. 
-iqr(): Interquartile range 
-entropy(): Signal entropy
-arCoeff(): Autorregresion coefficients with Burg order equal to 4
-correlation(): correlation coefficient between two signals
-maxInds(): index of the frequency component with largest magnitude
-meanFreq(): Weighted average of the frequency components to obtain a mean frequency
-skewness(): skewness of the frequency domain signal 
-kurtosis(): kurtosis of the frequency domain signal 
-bandsEnergy(): Energy of a frequency interval within the 64 bins of the FFT of each window.
-angle(): Angle between to vectors.
+
+- mean(): Mean value
+- std(): Standard deviation
+- mad(): Median absolute deviation 
+- max(): Largest value in array
+- min(): Smallest value in array
+- sma(): Signal magnitude area
+- energy(): Energy measure. Sum of the squares divided by the number of values. 
+- iqr(): Interquartile range 
+- entropy(): Signal entropy
+- arCoeff(): Autorregresion coefficients with Burg order equal to 4
+- correlation(): correlation coefficient between two signals
+- maxInds(): index of the frequency component with largest magnitude
+- meanFreq(): Weighted average of the frequency components to obtain a mean frequency
+- skewness(): skewness of the frequency domain signal 
+- kurtosis(): kurtosis of the frequency domain signal 
+- bandsEnergy(): Energy of a frequency interval within the 64 bins of the FFT of each window.
+- angle(): Angle between to vectors.
 
 The data is shown per subject (1-30) and (activity 1-6)
 
 ### Tidy Data
 The final processed data set (Tidy_data.csv) contains the following variables:
 
+- subjectId: Identifier for the subject that performed the activity. This is pulled from the subject_train.txt and subject_test.txt files and combined by column with the X_train.txt and X_test.txt files.
+- activityCode: Describes the type of activity performed for each measurement. Taken from the activity_labels.txt file and assigned according to the label (called activityId in script) in the y_train.txt and y_test.txt files.
+
+The next variables are sumarized from the original data by taking the mean per subject and activity:
+- mean() of all the original measurements
+- std(): of all the original measurements
 
 
